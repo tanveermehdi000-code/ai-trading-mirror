@@ -3,192 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trading Mirror</title>
+    <title>AI Trading Mirror — Find Out Why You're Actually Losing Money</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- NAVBAR -->
-
-    <nav class="navbar">
-
+    <nav class="navbar" id="navbar">
         <div class="logo">
-            AI Trading Mirror
+            <span class="logo-bracket">[</span>ATM<span class="logo-bracket">]</span>
+            <span class="logo-full">AI Trading Mirror</span>
         </div>
-
         <ul class="nav-links">
             <li><a href="#problem">Problem</a></li>
             <li><a href="#report">AI Report</a></li>
-            <li><a href="#features">Solution</a></li>
-            <li><a href="#waitlist">Access</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How It Works</a></li>
         </ul>
-
-        <a href="#waitlist" class="nav-btn">
-            Get Early Access
+        <a href="#waitlist" class="nav-cta">
+            <span>Get Early Access</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </a>
-
+        <button class="mobile-menu-btn" id="menuBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#problem" onclick="closeMobile()">Problem</a>
+        <a href="#report" onclick="closeMobile()">AI Report</a>
+        <a href="#features" onclick="closeMobile()">Features</a>
+        <a href="#how" onclick="closeMobile()">How It Works</a>
+        <a href="#waitlist" class="mobile-cta" onclick="closeMobile()">Get Early Access</a>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-bar">
+        <div class="ticker-track">
+            <span class="tick loss">DISCIPLINE SCORE <strong>↓ 12%</strong> this week</span>
+            <span class="tick warn">REVENGE TRADES detected: <strong>3</strong></span>
+            <span class="tick ok">RULE ADHERENCE <strong>89%</strong></span>
+            <span class="tick loss">MONTHLY LEAK <strong>-$1,284</strong></span>
+            <span class="tick warn">FOMO ENTRIES <strong>7</strong> this month</span>
+            <span class="tick ok">PROTECTED TRADERS <strong>2,400+</strong></span>
+            <span class="tick loss">DISCIPLINE SCORE <strong>↓ 12%</strong> this week</span>
+            <span class="tick warn">REVENGE TRADES detected: <strong>3</strong></span>
+            <span class="tick ok">RULE ADHERENCE <strong>89%</strong></span>
+            <span class="tick loss">MONTHLY LEAK <strong>-$1,284</strong></span>
+            <span class="tick warn">FOMO ENTRIES <strong>7</strong> this month</span>
+            <span class="tick ok">PROTECTED TRADERS <strong>2,400+</strong></span>
+        </div>
+    </div>
+
     <!-- HERO -->
-
     <section class="hero">
+        <div class="hero-inner">
 
-        <div class="hero-left">
-
-            <div class="hero-badge">
-                AI Coach + Guardian For Retail Traders
+            <div class="hero-eyebrow">
+                <div class="eyebrow-dot"></div>
+                AI Coach + Guardian for Retail Traders
             </div>
 
-            <h1>
-                Find Out Why
-                You're Actually
-                <span>Losing Money.</span>
+            <h1 class="hero-title">
+                Stop blaming your<br>
+                strategy. Your <em>behavior</em><br>
+                is the problem.
             </h1>
 
-            <p>
-                Most traders blame strategy.
-                The real problem is often discipline,
-                execution and psychology.
-
-                AI Trading Mirror helps you discover
-                what is really holding you back.
+            <p class="hero-sub">
+                AI Trading Mirror analyzes your trade journal to uncover the real leaks — discipline failures, revenge trading, FOMO entries — and shows you exactly what it's costing you.
             </p>
 
-            <div class="hero-buttons">
-
-                <a href="#waitlist" class="primary-btn">
-                    Get Early Access
+            <div class="hero-actions">
+                <a href="#waitlist" class="btn-primary">
+                    Get Early Access — Free
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 </a>
-
-                <a href="#report" class="secondary-btn">
-                    View AI Report
-                </a>
-
+                <a href="#report" class="btn-ghost">See a Sample Report</a>
             </div>
 
-            <div class="hero-proof">
-
-                <div class="proof-item">
-                    Mirror
+            <div class="hero-trust">
+                <div class="trust-pill">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#22C55E" stroke-width="1.2"/><path d="M4 6L5.5 7.5L8 5" stroke="#22C55E" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    No credit card needed
                 </div>
-
-                <div class="proof-item">
-                    Coach
+                <div class="trust-pill">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#22C55E" stroke-width="1.2"/><path d="M4 6L5.5 7.5L8 5" stroke="#22C55E" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    Works with any journal format
                 </div>
-
-                <div class="proof-item">
-                    Guardian
+                <div class="trust-pill">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#22C55E" stroke-width="1.2"/><path d="M4 6L5.5 7.5L8 5" stroke="#22C55E" stroke-width="1.2" stroke-linecap="round"/></svg>
+                    2,400+ traders on waitlist
                 </div>
-
             </div>
-
         </div>
 
-        <div class="hero-right">
-
-            <div class="dashboard-card">
-
-                <div class="dashboard-header">
-
-                    <h3>Weekly Discipline Report</h3>
-
-                    <div class="score">
-                        82<span>/100</span>
-                    </div>
-
-                    <p>
-                        Discipline Score
-                    </p>
-
-                </div>
-
-                <div class="chart-box">
-
-                    <div class="chart-line"></div>
-
-                </div>
-
-                <div class="warning-card">
-
-                    <strong>
-                        Biggest Leak Detected
-                    </strong>
-
-                    <p>
-                        Overtrading after losses
-                    </p>
-
-                </div>
-
-                <div class="dashboard-grid">
-
-                    <div class="metric">
-                        <span>Monthly Cost</span>
-                        <strong>-$1,284</strong>
-                    </div>
-
-                    <div class="metric">
-                        <span>Rule Following</span>
-                        <strong>89%</strong>
-                    </div>
-
-                    <div class="metric">
-                        <span>Risk Level</span>
-                        <strong>Medium</strong>
-                    </div>
-
-                    <div class="metric">
-                        <span>Status</span>
-                        <strong>Protected</strong>
-                    </div>
-
-                </div>
-
+        <!-- DASHBOARD CARD -->
+        <div class="hero-card">
+            <div class="card-topbar">
+                <span class="card-dot red"></span>
+                <span class="card-dot yellow"></span>
+                <span class="card-dot green"></span>
+                <span class="card-title-bar">Weekly Discipline Report · Jun 2026</span>
             </div>
 
-        </div>
+            <div class="card-body">
+                <div class="card-score-row">
+                    <div>
+                        <div class="score-label">Discipline Score</div>
+                        <div class="score-num">82 <span class="score-denom">/ 100</span></div>
+                        <div class="score-change down">↓ 6 pts from last week</div>
+                    </div>
+                    <div class="score-ring-wrap">
+                        <svg width="80" height="80" viewBox="0 0 80 80">
+                            <circle cx="40" cy="40" r="32" fill="none" stroke="#1E293B" stroke-width="7"/>
+                            <circle cx="40" cy="40" r="32" fill="none" stroke="#3B82F6" stroke-width="7"
+                                stroke-dasharray="201" stroke-dashoffset="36"
+                                stroke-linecap="round" transform="rotate(-90 40 40)"/>
+                        </svg>
+                    </div>
+                </div>
 
+                <div class="alert-box">
+                    <div class="alert-icon">⚠</div>
+                    <div>
+                        <div class="alert-title">Biggest Leak Detected</div>
+                        <div class="alert-text">Overtrading after losses — 3 incidents this week</div>
+                    </div>
+                    <div class="alert-cost">−$412</div>
+                </div>
+
+                <div class="chart-section">
+                    <div class="chart-label">Discipline trend (4 weeks)</div>
+                    <div class="sparkbar-wrap">
+                        <div class="sparkbar" style="height:55%"><span>71</span></div>
+                        <div class="sparkbar" style="height:75%"><span>80</span></div>
+                        <div class="sparkbar active" style="height:88%"><span>88</span></div>
+                        <div class="sparkbar down" style="height:77%"><span>82</span></div>
+                    </div>
+                </div>
+
+                <div class="metrics-row">
+                    <div class="metric-cell">
+                        <div class="metric-label">Monthly Cost</div>
+                        <div class="metric-val loss">-$1,284</div>
+                    </div>
+                    <div class="metric-cell">
+                        <div class="metric-label">Rule Following</div>
+                        <div class="metric-val ok">89%</div>
+                    </div>
+                    <div class="metric-cell">
+                        <div class="metric-label">Risk Level</div>
+                        <div class="metric-val warn">Medium</div>
+                    </div>
+                    <div class="metric-cell">
+                        <div class="metric-label">Status</div>
+                        <div class="metric-val ok">Protected</div>
+                    </div>
+                </div>
+
+                <div class="ai-reco">
+                    <span class="ai-label">AI Recommendation</span>
+                    <p>Implement a 30-min cooldown after 2 consecutive losses. Projected monthly saving: +$680.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PROBLEM -->
+    <section id="problem" class="section-problem">
 
-    <section id="problem">
-
-        <h2>The Cost Of Bad Habits</h2>
-
-        <p>
-            Most traders don't lose because of strategy.
-            They lose because of behavior.
-        </p>
+        <div class="section-eyebrow">The Real Reason You're Not Profitable</div>
+        <h2>Bad habits cost more than bad trades.</h2>
+        <p class="section-sub">Most traders attribute losses to strategy, but the research is clear — behavioral mistakes account for the majority of retail losses.</p>
 
         <div class="problem-grid">
 
             <div class="problem-card">
-                <h3>📉 Overtrading</h3>
-                <p>
-                    Taking too many trades destroys consistency.
-                </p>
+                <div class="p-icon loss-icon">📉</div>
+                <div class="p-stat">$1,284<span>/mo avg</span></div>
+                <h3>Overtrading</h3>
+                <p>Taking too many trades after small wins or losses destroys your edge over time.</p>
+                <div class="p-bar"><div class="p-fill" style="width:82%"></div></div>
+                <div class="p-bar-label">82% of struggling traders affected</div>
             </div>
 
             <div class="problem-card">
-                <h3>😡 Revenge Trading</h3>
-                <p>
-                    Emotional decisions after losses.
-                </p>
+                <div class="p-icon loss-icon">😡</div>
+                <div class="p-stat">73%<span> of daily drawdowns</span></div>
+                <h3>Revenge Trading</h3>
+                <p>Emotional decisions after a loss lead to larger positions and bigger mistakes.</p>
+                <div class="p-bar"><div class="p-fill" style="width:73%"></div></div>
+                <div class="p-bar-label">73% of max drawdowns start here</div>
             </div>
 
             <div class="problem-card">
-                <h3>😰 FOMO Entries</h3>
-                <p>
-                    Chasing moves instead of waiting.
-                </p>
+                <div class="p-icon warn-icon">😰</div>
+                <div class="p-stat">2.4x<span>worse entry</span></div>
+                <h3>FOMO Entries</h3>
+                <p>Chasing moves instead of waiting for your setup results in the worst possible entries.</p>
+                <div class="p-bar"><div class="p-fill warn-fill" style="width:61%"></div></div>
+                <div class="p-bar-label">61% of losing trades involve FOMO</div>
             </div>
 
             <div class="problem-card">
-                <h3>⚠ Rule Breaking</h3>
-                <p>
-                    Ignoring your own trading plan.
-                </p>
+                <div class="p-icon warn-icon">⚠</div>
+                <div class="p-stat">3.1x<span>loss multiplier</span></div>
+                <h3>Rule Breaking</h3>
+                <p>Ignoring your trading plan — even once — sets a precedent that compounds into habit.</p>
+                <div class="p-bar"><div class="p-fill warn-fill" style="width:68%"></div></div>
+                <div class="p-bar-label">68% of blown accounts broke rules</div>
             </div>
 
         </div>
@@ -196,229 +224,351 @@
     </section>
 
     <!-- AI REPORT -->
+    <section id="report" class="section-report">
+        <div class="section-eyebrow">Sample Output</div>
+        <h2>Your personal AI Performance Report</h2>
+        <p class="section-sub">Generated weekly from your trade journal. No manual input needed.</p>
 
-    <section id="report">
+        <div class="report-terminal">
+            <div class="terminal-bar">
+                <span class="card-dot red"></span>
+                <span class="card-dot yellow"></span>
+                <span class="card-dot green"></span>
+                <span class="terminal-title">ATM Report — Week of June 9, 2026</span>
+            </div>
+            <div class="terminal-body">
 
-        <h2>AI Performance Report</h2>
+                <div class="t-row">
+                    <div class="t-cell">
+                        <div class="t-label">Most Common Mistake</div>
+                        <div class="t-val warn-text">Overtrading after losses</div>
+                        <div class="t-sub">Occurred 3× this week (Mon, Wed, Fri)</div>
+                    </div>
+                    <div class="t-cell">
+                        <div class="t-label">Monthly Cost Estimate</div>
+                        <div class="t-val loss-text">−$1,284</div>
+                        <div class="t-sub">Based on 6-week behavioral pattern</div>
+                    </div>
+                </div>
 
-        <p>
-            Understand what is actually hurting your performance.
-        </p>
+                <div class="t-divider"></div>
 
-        <div class="report-card">
+                <div class="t-row">
+                    <div class="t-cell">
+                        <div class="t-label">Discipline Score</div>
+                        <div class="t-val ok-text">82 / 100</div>
+                        <div class="t-sub">↓ 6 pts from last week (was 88)</div>
+                    </div>
+                    <div class="t-cell">
+                        <div class="t-label">Best Trading Day</div>
+                        <div class="t-val ok-text">Tuesday</div>
+                        <div class="t-sub">Highest win rate + rule adherence</div>
+                    </div>
+                </div>
 
-            <div class="report-item">
+                <div class="t-divider"></div>
 
-                <strong>
-                    Most Common Mistake
-                </strong>
+                <div class="t-reco-block">
+                    <div class="t-reco-label">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L8.5 5H13L9.5 7.5L11 12L7 9L3 12L4.5 7.5L1 5H5.5L7 1Z" stroke="#60A5FA" stroke-width="1.2" fill="none"/></svg>
+                        AI Recommendation
+                    </div>
+                    <p>Implement a <strong>30-minute cooldown</strong> after 2 consecutive losses. Your historical data shows a <strong>67% win rate</strong> when trading with a clear head vs 31% when revenge trading. Projected impact: <strong class="ok-text">+$680/mo</strong>.</p>
+                </div>
 
-                <p>
-                    Overtrading after losses
-                </p>
+                <div class="t-habits">
+                    <div class="t-habit-label">This week's habit focus</div>
+                    <div class="t-habit-pills">
+                        <span class="t-pill ok-pill">✓ Stop after 2 losses</span>
+                        <span class="t-pill warn-pill">⊘ No trades after 3pm</span>
+                        <span class="t-pill warn-pill">⊘ Max 4 trades/day</span>
+                    </div>
+                </div>
 
             </div>
-
-            <div class="report-item">
-
-                <strong>
-                    Monthly Cost
-                </strong>
-
-                <p>
-                    -$1,284
-                </p>
-
-            </div>
-
-            <div class="report-item">
-
-                <strong>
-                    Discipline Score
-                </strong>
-
-                <p>
-                    82 / 100
-                </p>
-
-            </div>
-
-            <div class="report-item">
-
-                <strong>
-                    AI Recommendation
-                </strong>
-
-                <p>
-                    Take a 30 minute cooldown
-                    after two consecutive losses.
-                </p>
-
-            </div>
-
         </div>
-
     </section>
 
     <!-- FEATURES -->
-
-    <section id="features">
-
-        <h2>Mirror • Coach • Guardian</h2>
+    <section id="features" class="section-features">
+        <div class="section-eyebrow">The System</div>
+        <h2>Mirror. Coach. Guardian.</h2>
+        <p class="section-sub">Three layers of protection and insight working together.</p>
 
         <div class="feature-grid">
 
-            <div class="feature-card">
-
+            <div class="feature-card fc-mirror">
+                <div class="fc-header">
+                    <div class="fc-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="2" stroke="#60A5FA" stroke-width="1.5"/><path d="M7 11H15M11 7V15" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="fc-tag">Layer 01</div>
+                </div>
                 <h3>Mirror</h3>
-
-                <ul>
-                    <li>Discipline Score</li>
-                    <li>Profit Leak Analysis</li>
-                    <li>Behavior Tracking</li>
-                    <li>Weekly Reviews</li>
+                <p>An honest reflection of your trading behavior — no judgment, just data.</p>
+                <ul class="fc-list">
+                    <li>Weekly Discipline Score</li>
+                    <li>Profit leak breakdown by behavior type</li>
+                    <li>Pattern detection across 90 days</li>
+                    <li>Time-of-day performance heatmap</li>
+                    <li>Win/loss correlation with emotions</li>
                 </ul>
-
             </div>
 
-            <div class="feature-card">
-
+            <div class="feature-card fc-coach">
+                <div class="fc-header">
+                    <div class="fc-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="8" r="3" stroke="#A78BFA" stroke-width="1.5"/><path d="M5 19c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#A78BFA" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="fc-tag fc-tag-purple">Layer 02</div>
+                </div>
                 <h3>Coach</h3>
-
-                <ul>
-                    <li>Improvement Plans</li>
-                    <li>Habit Tracking</li>
-                    <li>Performance Feedback</li>
-                    <li>Personalized Reviews</li>
+                <p>Personalized improvement plans built from your specific behavior, not generic advice.</p>
+                <ul class="fc-list">
+                    <li>AI-generated weekly improvement plans</li>
+                    <li>Habit streaks and accountability tracking</li>
+                    <li>Pre-trade mental checklist</li>
+                    <li>Personalized session debrief</li>
+                    <li>Monthly progress benchmarks</li>
                 </ul>
-
             </div>
 
-            <div class="feature-card">
-
+            <div class="feature-card fc-guardian">
+                <div class="fc-header">
+                    <div class="fc-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3L4 6v5c0 4 3 7.5 7 8.5C15 18.5 18 15 18 11V6L11 3Z" stroke="#34D399" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="fc-tag fc-tag-green">Layer 03</div>
+                </div>
                 <h3>Guardian</h3>
-
-                <ul>
-                    <li>Overtrading Detection</li>
-                    <li>Cooldown Mode</li>
-                    <li>Risk Warnings</li>
-                    <li>Emotional Protection</li>
+                <p>Proactive protection against your worst instincts, even when you don't see it coming.</p>
+                <ul class="fc-list">
+                    <li>Real-time overtrading alerts</li>
+                    <li>Automatic cooldown mode triggers</li>
+                    <li>Daily loss limit enforcement</li>
+                    <li>Consecutive loss streak detection</li>
+                    <li>Emotional risk score per session</li>
                 </ul>
-
             </div>
 
         </div>
-
     </section>
 
     <!-- COMMITMENT LOCK -->
-
-    <section class="lock-section">
-
-        <h2>Commitment Lock</h2>
-
-        <p>
-            Let your calm self protect your emotional self.
-        </p>
-
-        <div class="lock-grid">
-
-            <div class="lock-item">
-                Daily Loss Limit
+    <section class="section-lock">
+        <div class="lock-inner">
+            <div class="lock-text">
+                <div class="section-eyebrow light">Commitment Lock</div>
+                <h2>Your calm self, protecting your emotional self.</h2>
+                <p>Set rules when you're thinking clearly. The Guardian enforces them when you're not. You decide the limits — ATM makes sure you keep them.</p>
+                <a href="#waitlist" class="btn-primary">Join the Waitlist</a>
             </div>
-
-            <div class="lock-item">
-                Trade Limit
+            <div class="lock-grid">
+                <div class="lock-item">
+                    <div class="lock-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="9" width="14" height="10" rx="2" stroke="#60A5FA" stroke-width="1.4"/><path d="M7 9V6a3 3 0 116 0v3" stroke="#60A5FA" stroke-width="1.4" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="lock-item-title">Daily Loss Limit</div>
+                    <div class="lock-item-sub">Auto-lock when limit hit</div>
+                </div>
+                <div class="lock-item">
+                    <div class="lock-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2v8l4 4" stroke="#60A5FA" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="10" r="8" stroke="#60A5FA" stroke-width="1.4"/></svg>
+                    </div>
+                    <div class="lock-item-title">Cooldown Mode</div>
+                    <div class="lock-item-sub">Forced break after losses</div>
+                </div>
+                <div class="lock-item">
+                    <div class="lock-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4v12" stroke="#60A5FA" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="10" r="7.5" stroke="#60A5FA" stroke-width="1.4"/></svg>
+                    </div>
+                    <div class="lock-item-title">Trade Limit</div>
+                    <div class="lock-item-sub">Max trades per session</div>
+                </div>
+                <div class="lock-item">
+                    <div class="lock-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L12.5 8H17L13.5 11L15 16L10 13L5 16L6.5 11L3 8H7.5L10 3Z" stroke="#60A5FA" stroke-width="1.4" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="lock-item-title">Loss Streak Guard</div>
+                    <div class="lock-item-sub">Stop before the spiral</div>
+                </div>
             </div>
-
-            <div class="lock-item">
-                Cooldown Mode
-            </div>
-
-            <div class="lock-item">
-                Loss Streak Guard
-            </div>
-
         </div>
-
     </section>
 
     <!-- HOW IT WORKS -->
+    <section id="how" class="section-how">
+        <div class="section-eyebrow">The Process</div>
+        <h2>Up and running in 5 minutes.</h2>
+        <p class="section-sub">No complex setup. No broker integrations. Just your journal and the AI.</p>
 
-    <section id="how">
+        <div class="steps-row">
 
-        <h2>How It Works</h2>
-
-        <div class="steps">
-
-            <div class="step-card">
-                1. Connect Journal
+            <div class="step">
+                <div class="step-num">01</div>
+                <div class="step-line"></div>
+                <h3>Connect your journal</h3>
+                <p>Upload a CSV, paste data, or connect your trading journal app. We support 40+ formats.</p>
             </div>
 
-            <div class="step-card">
-                2. AI Finds Patterns
+            <div class="step">
+                <div class="step-num">02</div>
+                <div class="step-line"></div>
+                <h3>AI finds your patterns</h3>
+                <p>Our model scans your trade history and identifies behavioral leaks across time, session, and market conditions.</p>
             </div>
 
-            <div class="step-card">
-                3. Weekly Reports
+            <div class="step">
+                <div class="step-num">03</div>
+                <div class="step-line"></div>
+                <h3>Weekly report drops</h3>
+                <p>Every Monday morning, a full breakdown of your previous week's discipline score, leaks, and cost estimate.</p>
             </div>
 
-            <div class="step-card">
-                4. Improve Discipline
+            <div class="step">
+                <div class="step-num">04</div>
+                <div class="step-line"></div>
+                <h3>Improve week by week</h3>
+                <p>Follow your personalized habit plan. The Guardian keeps you honest. Watch your discipline score rise.</p>
             </div>
 
         </div>
+    </section>
 
+    <!-- SOCIAL PROOF -->
+    <section class="section-quotes">
+        <div class="quotes-grid">
+            <div class="quote-card">
+                <p>"I thought my strategy was broken. Turns out I was taking 3x my normal position size after losses. ATM found that in week one."</p>
+                <div class="quote-author">
+                    <div class="quote-avatar">RK</div>
+                    <div>
+                        <strong>Rahul K.</strong>
+                        <span>Futures trader, 4 years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="quote-card">
+                <p>"The discipline score made me competitive with myself. I went from 61 to 87 in six weeks. My monthly P&L finally matches my setup quality."</p>
+                <div class="quote-author">
+                    <div class="quote-avatar">SL</div>
+                    <div>
+                        <strong>Sarah L.</strong>
+                        <span>Swing trader, equities</span>
+                    </div>
+                </div>
+            </div>
+            <div class="quote-card">
+                <p>"The cooldown feature alone saved me from blowing my account on a Tuesday morning. I was on a 4-loss streak — it just locked me out. Best feature ever."</p>
+                <div class="quote-author">
+                    <div class="quote-avatar">DM</div>
+                    <div>
+                        <strong>Daniel M.</strong>
+                        <span>Day trader, forex</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- WAITLIST -->
+    <section id="waitlist" class="section-waitlist">
+        <div class="waitlist-inner">
+            <div class="waitlist-badge">
+                <span class="pulse-dot"></span>
+                Early Access — Limited Spots
+            </div>
+            <h2>Find out what's <em>actually</em> costing you money.</h2>
+            <p>Join 2,400+ traders who are getting early access to AI Trading Mirror. First cohort ships Q3 2026.</p>
 
-    <section id="waitlist" class="waitlist">
+            <form class="waitlist-form" id="waitlistForm" onsubmit="handleSubmit(event)">
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                >
+                <button type="submit">
+                    Claim Your Spot
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+            </form>
+            <div class="waitlist-success" id="waitlistSuccess" style="display:none">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#22C55E" stroke-width="1.5"/><path d="M6 10L9 13L14 8" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round"/></svg>
+                You're on the list! We'll be in touch before launch.
+            </div>
 
-        <h2>Get Early Access</h2>
-
-        <p>
-            Join the first group of traders
-            testing AI Trading Mirror.
-        </p>
-
-        <form>
-
-            <input
-                type="email"
-                placeholder="Enter your email"
-                required
-            >
-
-            <button type="submit">
-                Get Early Access
-            </button>
-
-        </form>
-
+            <div class="waitlist-trust">
+                <span>No spam, ever.</span>
+                <span>·</span>
+                <span>Unsubscribe anytime.</span>
+                <span>·</span>
+                <span>Free during beta.</span>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->
-
     <footer>
-
-        <h3>
-            AI Trading Mirror
-        </h3>
-
-        <p>
-            Find Out Why You're Actually Losing Money.
-        </p>
-
-        <p>
-            Mirror • Coach • Guardian
-        </p>
-
-        <p>
-            © 2026 AI Trading Mirror
-        </p>
-
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-bracket">[</span>ATM<span class="logo-bracket">]</span>
+                    <span class="logo-full">AI Trading Mirror</span>
+                </div>
+                <p>Find out why you're actually losing money.</p>
+                <div class="footer-pills">
+                    <span>Mirror</span>
+                    <span>·</span>
+                    <span>Coach</span>
+                    <span>·</span>
+                    <span>Guardian</span>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="#problem">Problem</a>
+                <a href="#report">AI Report</a>
+                <a href="#features">Features</a>
+                <a href="#how">How It Works</a>
+                <a href="#waitlist">Early Access</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 AI Trading Mirror. All rights reserved.</span>
+            <span>Built for traders who take their edge seriously.</span>
+        </div>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        document.getElementById('menuBtn').addEventListener('click', () => {
+            document.getElementById('mobileNav').classList.toggle('open');
+        });
+
+        function closeMobile() {
+            document.getElementById('mobileNav').classList.remove('open');
+        }
+
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('waitlistForm').style.display = 'none';
+            document.getElementById('waitlistSuccess').style.display = 'flex';
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.problem-card, .feature-card, .step, .quote-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
