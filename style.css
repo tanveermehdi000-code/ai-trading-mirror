@@ -1512,6 +1512,7 @@ footer {
     font-weight: 600;
     color: var(--text-1);
     gap: 16px;
+    user-select: none;
 }
 
 .faq-arrow {
@@ -1519,6 +1520,7 @@ footer {
     color: var(--blue-light);
     flex-shrink: 0;
     transition: transform 0.3s;
+    display: inline-block;
 }
 
 .faq-item.open .faq-arrow {
@@ -1527,19 +1529,17 @@ footer {
 
 .faq-a {
     display: none;
-    padding: 0 24px 20px;
+    padding: 16px 24px 20px;
     font-size: 14px;
     color: var(--text-2);
     line-height: 1.75;
     border-top: 1px solid var(--border);
-    padding-top: 16px;
 }
 
 .faq-item.open .faq-a {
     display: block;
 }
 
-/* Section quotes heading fix */
 .section-quotes .section-eyebrow,
 .section-quotes h2 {
     display: block;
